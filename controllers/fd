@@ -1,0 +1,10 @@
+    userCash : async (req, res) => {
+        try {
+            const user = await User.findByIdAndUpdate(req.params.id , {
+                check: check + req.body.check
+           })
+           res.json(user)
+        } catch (error) {
+            res.json(error)
+        }
+    }
